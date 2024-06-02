@@ -1,0 +1,4 @@
+com\contradodigital\decorator\ShapeDecorator.class
+com\contradodigital\decorator\RedShapeDecorator.class
+com\contradodigital\decorator\Shape.class
+com\contradodigital\decorator\Rectangle.class

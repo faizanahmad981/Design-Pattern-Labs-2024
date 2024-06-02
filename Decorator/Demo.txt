@@ -1,0 +1,44 @@
+Why Decorator Pattern?
+Dynamic Behavior Extension:
+
+Decorator pattern allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class.
+It is useful when you want to add new functionality to objects without modifying their structure.
+Open-Closed Principle:
+
+It adheres to the Open-Closed Principle, which states that classes should be open for extension but closed for modification.
+In the Decorator pattern, you can introduce new decorators without changing the existing code.
+How It's Used:
+Interface: Shape (Shape.java):
+
+Defines the interface that all concrete components and decorators must implement.
+Contains a method draw() which is implemented by concrete components like Rectangle and Circle.
+Concrete Component: Rectangle (Rectangle.java):
+
+Represents the basic object to which additional functionality can be added.
+Implements the Shape interface and provides the basic behavior of drawing a rectangle.
+Decorator: ShapeDecorator (ShapeDecorator.java):
+
+Abstract class that implements the Shape interface.
+Contains a reference to a Shape object, acting as a base for concrete decorators.
+Provides the common functionality for all concrete decorators.
+Concrete Decorator: RedShapeDecorator (RedShapeDecorator.java):
+
+Extends ShapeDecorator and adds additional functionality to the component it decorates.
+Overrides the draw() method to provide the additional behavior of drawing a border with a specific color (in this case, red).
+Flow of the Code:
+Main Class: Decorator (Decorator.java):
+
+Creates instances of concrete components (e.g., Rectangle).
+Demonstrates adding additional behavior using decorators (e.g., RedShapeDecorator).
+Calls the draw() method on these objects to execute their behavior.
+Creating Concrete Component: Rectangle (Rectangle.java):
+
+Implements the Shape interface, providing the basic behavior of drawing a rectangle.
+Creating Decorators: RedShapeDecorator (RedShapeDecorator.java):
+
+Extends ShapeDecorator, adding additional behavior of drawing a red border around a shape.
+Calls the draw() method of the decorated shape and adds functionality to it.
+Using Decorators:
+
+In the main method of Decorator.java, creates instances of concrete components (e.g., Rectangle) and applies decorators (e.g., RedShapeDecorator) to add additional behavior.
+Demonstrates how the behavior of objects can be extended dynamically by using decorators.
